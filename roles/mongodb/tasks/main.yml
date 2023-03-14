@@ -1,22 +1,21 @@
-- name: Setup MongoDB YUM repo file
+- name: setting up mongodb repo
   ansible.builtin.copy:
     src: mongodb.repo
-    dest: /etc/yum.repos.d/mongo.repo
+    dest: /etc/yum.repos.d/mongodb.repo
 
-- name: Install MongoDB
+- name: Install mongodb
   ansible.builtin.yum:
     name: mongodb-org
     state: installed
 
-- name: Update MongoDB Listen Address
+- name: Replace old hostname with new hostname (requires Ansible >= 2.4)
   ansible.builtin.replace:
     path: /etc/mongod.conf
     regexp: '127.0.0.1'
     replace: '0.0.0.0'
 
-- name: Start MongoDB
-  ansible.builtin.systemd:
+- name: Enable and restart mongodb
+  ansible.builtin.service:
     name: mongod
-    state: started
     enabled: true
-
+    state: restarted
