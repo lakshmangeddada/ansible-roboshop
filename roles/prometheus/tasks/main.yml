@@ -1,4 +1,0 @@
-- name: roboshop-server
-  ansible.builtin.import_tasks:
-    src: server.yml
-    dest:
