@@ -1,0 +1,3 @@
+#set hostname
+#install prometheus from web using curl -L -O "url"
+#
