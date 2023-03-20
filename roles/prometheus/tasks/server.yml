@@ -1,3 +1,4 @@
-- name: test
-  debug:
-    msg: test
+- name: change prometheus configurations
+  ansible.builtin.templates:
+    src: prometheus.yml
+    dest: /etc/systemd/system/node_exporter.service
