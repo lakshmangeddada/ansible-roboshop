@@ -4,6 +4,6 @@
     dest: /etc/systemd/system/node_exporter.service
 
 - name: restart service
-  ansible.builtin.system:
+  ansible.builtin.systemd:
     name: prometheus
     state: reload
