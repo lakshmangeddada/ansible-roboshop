@@ -2,3 +2,8 @@
   ansible.builtin.templates:
     src: prometheus.yml
     dest: /etc/systemd/system/node_exporter.service
+
+- name: restart service
+  ansible.builtin.system:
+    name: prometheus
+    state: reload

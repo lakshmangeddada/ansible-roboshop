@@ -3,8 +3,5 @@
     file: server.yml
   when: prometheus_server
 
-- name: restart service
-  ansible.builtin.system:
-    name: prometheus
-    state: reload
+
 
