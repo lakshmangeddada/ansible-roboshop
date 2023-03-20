@@ -1,7 +1,7 @@
 - name: change prometheus configurations
   ansible.builtin.template:
     src: prometheus.yml
-    dest: /etc/systemd/system/prometheus.service
+    dest: /opt/prometheus/prometheus.yml
 
 - name: restart service
   ansible.builtin.systemd:
