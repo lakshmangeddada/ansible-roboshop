@@ -6,4 +6,4 @@
 - name: restart service
   ansible.builtin.systemd:
     name: prometheus
-    state: reload
+    state: reloaded
