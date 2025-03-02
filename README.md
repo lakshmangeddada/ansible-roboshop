@@ -1,5 +1,6 @@
 # ansible-roboshop
-step1: Install python3 and ansible
+step1: Install python3 and ansible.
+
 step2: add hosts IP or hostname in inventory file. (ansible must be installed in the hosts.)
   We can keep either IP address or Hostname.
   • Grouping can be done either individual files based on environment or based on component and even together and that always depends upon the architecture design that project had.
