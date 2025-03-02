@@ -32,4 +32,11 @@ step2: add hosts IP or hostname in inventory file. (ansible must be installed in
 ** ansible -i /tmp/inv App -e ansible_user=centos -e ansible_password=DevOps321 -m ansible.builtin.ping 
 
     App: group name
+
+Ansible Playbooks: written in YAML.
+
+  Always have hosts, inside hosts always have tasks or roles.
+
+
+
   
