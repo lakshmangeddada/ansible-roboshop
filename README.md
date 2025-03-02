@@ -30,5 +30,6 @@ step2: add hosts IP or hostname in inventory file. (ansible must be installed in
   If you want to connect to particular group then add group name in the inventory file.
   
 ** ansible -i /tmp/inv App -e ansible_user=centos -e ansible_password=DevOps321 -m ansible.builtin.ping 
+
     App: group name
   
